@@ -1,12 +1,13 @@
-CREATE DATABASE php_mysql_crud;
+use testebulla;
 
-use php_mysql_crud;
+CREATE TABLE users(
 
-CREATE TABLE task(
-  id INT(11) PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255) NOT NULL,
-  description TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+id INT NOT NULL AUTO_INCREMENT,
+nome VARCHAR(255) NOT NULL,
+endereco VARCHAR(255) NOT NULL,
+telefone VARCHAR(10) NULL,
+cidade VARCHAR(20) NOT NULL,
+estado CHAR(2) NOT NULL,
+PRIMARY KEY (`id`)
+
 );
-
-DESCRIBE task;
